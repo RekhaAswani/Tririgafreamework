@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Tririga Automation Regression" duration-ms="221205" started-at="2020-10-18T05:45:33Z" finished-at="2020-10-18T05:49:14Z">
+    <groups>
+    </groups>
+    <test name="TEST" duration-ms="221205" started-at="2020-10-18T05:45:33Z" finished-at="2020-10-18T05:49:14Z">
+      <class name="Tririga_TestScriptsPkg.Add_Floor_Space_UnderBuilding">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:Tririga_TestScriptsPkg.Add_Floor_Space_UnderBuilding@609cd4d8]" name="beforeSuite" is-config="true" duration-ms="144" started-at="2020-10-18T05:45:33Z" finished-at="2020-10-18T05:45:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://shell-test.tririga.com/index.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Tririga_TestScriptsPkg.Add_Floor_Space_UnderBuilding@609cd4d8]" name="beforeMethod" is-config="true" duration-ms="12668" started-at="2020-10-18T05:45:33Z" finished-at="2020-10-18T05:45:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Tririga_TestScriptsPkg.Add_Floor_Space_UnderBuilding.AddFloorSpaceUnderBuilding(java.util.Hashtable,java.lang.reflect.Method) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="AddFloorSpaceUnderBuilding(java.util.Hashtable, java.lang.reflect.Method)[pri:0, instance:Tririga_TestScriptsPkg.Add_Floor_Space_UnderBuilding@609cd4d8]" name="AddFloorSpaceUnderBuilding" duration-ms="208385" started-at="2020-10-18T05:45:46Z" description="Add floor, space under building" data-provider="getData" finished-at="2020-10-18T05:49:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{GrossArea=100.0, Username=PAtester3, GrossMeasuredArea=100.0, Password=password, Runmode=Y, SpaceUsageType=Advertising Space, FloorLevel=2.0}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Tririga_TestScriptsPkg.Add_Floor_Space_UnderBuilding.AddFloorSpaceUnderBuilding(java.util.Hashtable,java.lang.reflect.Method) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddFloorSpaceUnderBuilding -->
+        <test-method status="PASS" signature="aftreMethod()[pri:0, instance:Tririga_TestScriptsPkg.Add_Floor_Space_UnderBuilding@609cd4d8]" name="aftreMethod" is-config="true" duration-ms="64" started-at="2020-10-18T05:49:14Z" finished-at="2020-10-18T05:49:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftreMethod -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:Tririga_TestScriptsPkg.Add_Floor_Space_UnderBuilding@609cd4d8]" name="afterSuite" is-config="true" duration-ms="32" started-at="2020-10-18T05:49:14Z" finished-at="2020-10-18T05:49:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- Tririga_TestScriptsPkg.Add_Floor_Space_UnderBuilding -->
+    </test> <!-- TEST -->
+  </suite> <!-- Tririga Automation Regression -->
+</testng-results>

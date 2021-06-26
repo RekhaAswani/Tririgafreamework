@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Tririga Automation Regression">
+	<parameter name="baseURL"
+		value="https://shell-test.tririga.com/index.html"></parameter>
+	<test name="Login">
+		<classes>
+			<class name="Tririga_TestScriptsPkg.CreateNew_ExpenseLeaseContract_ActivateContract" />
+			<class name="Tririga_TestScriptsPkg.CreateNew_IncomeLeaseContract_ActivateContract" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,215 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>Tririga_Automation</groupId>
+  <artifactId>Tririga_Automation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Tririga_Automation</name>
+  <url>http://maven.apache.org</url>
+
+  <!-- <properties> -->
+    <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+  <!-- </properties> -->
+  <properties>
+    <maven-jar-plugin.version>3.5.4</maven-jar-plugin.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+	<dependency>
+		<groupId>org.apache.maven</groupId>
+		<artifactId>maven-artifact</artifactId>
+		<version>3.5.4</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.apache.maven.plugins</groupId>
+	  <artifactId>maven-compiler-plugin</artifactId>
+	  <version>3.8.1</version>
+	  <type>maven-plugin</type>
+	</dependency>
+	<dependency>
+  		<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-surefire-plugin</artifactId>
+  		<version>3.0.0-M4</version>
+  		<type>maven-plugin</type>
+	</dependency>
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.12</version>
+		<!--<scope>test</scope>-->
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+	<dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-java</artifactId>
+		<!-- <version>3.141.59</version> -->
+		<version>3.4.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi</artifactId>
+		<!-- <version>4.0.1</version> -->
+		<version>3.6</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+	<!--
+	<dependency>
+		<groupId>com.aventstack</groupId>
+		<artifactId>extentreports</artifactId>
+		<version>4.0.9</version>
+	</dependency>
+	-->
+	<dependency>
+    	<groupId>com.relevantcodes</groupId>
+    	<artifactId>extentreports</artifactId>
+    	<version>2.031</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.testng</groupId>
+	  <artifactId>testng</artifactId>
+	  <version>6.14.3</version>
+	</dependency> 
+	<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+	<dependency>
+		<groupId>javax.mail</groupId>
+		<artifactId>javax.mail-api</artifactId>
+		<version>1.6.0</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml</artifactId>
+		<version>3.6</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml-schemas</artifactId>
+		<version>3.6</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-report-plugin</artifactId>
+		<version>2.19.1</version>
+		<type>maven-plugin</type>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.maven.surefire</groupId>
+		<artifactId>surefire-logger-api</artifactId>
+		<version>3.0.0-M4</version>
+	</dependency>
+  </dependencies>
+    
+  <build>
+	<plugins>
+		<!-- Following plugin executes the testng tests -->
+		<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M4</version>
+			<configuration>
+					<!-- Suite testng xml file to consider for test execution -->
+					<suiteXmlFiles>
+						<!-- <suiteXmlFile>${project.basedir}/testng_xmls/${suiteFile}</suiteXmlFile> -->
+						<suiteXmlFile>${project.basedir}/testng.xml</suiteXmlFile> -->
+					</suiteXmlFiles>
+			</configuration>
+		</plugin>
+		<plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+		<plugin>
+		    <groupId>maven</groupId>
+			<artifactId>maven-junit-report-plugin</artifactId>
+			<version>1.5.1</version>
+		</plugin>
+		<!--
+		<plugin>  
+			<groupId>org.codehaus.mojo</groupId>  
+			<artifactId>exec-maven-plugin</artifactId>  
+			<version>1.2.1</version>  
+			<executions>  
+				<execution>  
+					<phase>test</phase>  
+					<goals>  
+						<goal>java</goal>  
+					</goals>  
+					<configuration>  
+						<mainClass>com.Tririga.Driver.TestRunner</mainClass> 
+						<arguments>  
+							<argument>arg0</argument>  
+							<argument>arg1</argument>  
+						</arguments> 
+						<classpathScope>test</classpathScope>
+					</configuration>  
+				</execution>  
+			</executions>  
+		</plugin>  
+		-->
+	</plugins>
+
+       <!--  
+	<pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.5.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+     -->
+	
+  </build>
+  
+  <reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.19.1</version>
+			</plugin>
+		</plugins>
+	</reporting>
+
+  
+</project>

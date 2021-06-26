@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Tririga Automation Regression]">
+  <parameter name="baseURL" value="https://shell-test.tririga.com/index.html"/>
+  <test thread-count="5" name="TEST(failed)">
+    <classes>
+      <class name="Tririga_TestScriptsPkg.Expire_An_ExistingLease_DueExpiration_Today">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="AddLandBuildingUnderBuilding" invocation-numbers="0"/>
+          <include name="aftreMethod"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Tririga_TestScriptsPkg.Expire_An_ExistingLease_DueExpiration_Today -->
+    </classes>
+  </test> <!-- TEST(failed) -->
+</suite> <!-- Failed suite [Tririga Automation Regression] -->
